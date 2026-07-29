@@ -10,6 +10,10 @@ export interface Project {
   github?: string;
   image?: string;
   download?: string;
+  demoVideos?: {
+    label: string;
+    src: string;
+  }[];
   highlights: string[];
 }
 
@@ -23,6 +27,10 @@ export const projects: Project[] = [
     tags: ['Android', 'Java', '火山引擎RTC', 'ASR', 'TTS', 'ESP32'],
     status: 'live',
     download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk',
+    demoVideos: [
+      { label: '硬件演示', src: 'video/ai故事硬件玩具.mp4' },
+      { label: '软件演示', src: 'video/ai故事软件.mp4' },
+    ],
     highlights: [
       'RTC实时双向语音对话',
       '「豆芽豆芽」语音唤醒',

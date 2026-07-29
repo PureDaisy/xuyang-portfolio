@@ -1,7 +1,21 @@
 import { useState, useEffect, useRef } from 'react';
 import { projects, Project } from '../data/projects';
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+type SelectedVideo = {
+  title: string;
+  label: string;
+  src: string;
+};
+
+function ProjectCard({
+  project,
+  index,
+  onOpenVideo,
+}: {
+  project: Project;
+  index: number;
+  onOpenVideo: (video: SelectedVideo) => void;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -137,6 +151,26 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               源码
             </a>
           )}
+          {project.demoVideos?.map((video) => (
+            <button
+              key={video.src}
+              type="button"
+              onClick={() =>
+                onOpenVideo({
+                  title: project.title,
+                  label: video.label,
+                  src: `${import.meta.env.BASE_URL}${video.src}`,
+                })
+              }
+              className="flex items-center gap-1.5 text-sm text-blue-500 hover:text-blue-600 transition-colors font-medium"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-5.197-3.027A1 1 0 008 9.006v5.988a1 1 0 001.555.832l5.197-2.961a1 1 0 000-1.697z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {video.label}
+            </button>
+          ))}
         </div>
       </div>
     </div>
@@ -144,6 +178,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export default function Projects() {
+  const [selectedVideo, setSelectedVideo] = useState<SelectedVideo | null>(null);
+
   return (
     <section id="projects" className="py-24" style={{ backgroundColor: '#f8fafc' }}>
       <div className="max-w-6xl mx-auto px-6">
@@ -161,10 +197,52 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              onOpenVideo={setSelectedVideo}
+            />
           ))}
         </div>
       </div>
+
+      {selectedVideo && (
+        <div
+          className="fixed inset-0 z-50 bg-gray-900/70 px-4 py-8 flex items-center justify-center"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div
+            className="w-full max-w-3xl bg-white rounded-2xl overflow-hidden shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-gray-100">
+              <div>
+                <p className="text-sm text-blue-500 font-medium">{selectedVideo.label}</p>
+                <h3 className="text-lg font-semibold text-gray-800">{selectedVideo.title}</h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedVideo(null)}
+                className="w-9 h-9 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors flex items-center justify-center"
+                aria-label="关闭视频"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <video
+              key={selectedVideo.src}
+              className="w-full bg-black max-h-[75vh]"
+              src={selectedVideo.src}
+              controls
+              autoPlay
+              playsInline
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
