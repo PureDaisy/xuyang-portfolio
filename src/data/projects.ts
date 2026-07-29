@@ -9,6 +9,7 @@ export interface Project {
   link?: string;
   github?: string;
   image?: string;
+  download?: string;
   highlights: string[];
 }
 
@@ -21,6 +22,7 @@ export const projects: Project[] = [
     descriptionEn: 'An AI oral English training app for children, featuring real-time voice interaction via Volcano Engine RTC, ASR, and TTS capabilities.',
     tags: ['Android', 'Java', '火山引擎RTC', 'ASR', 'TTS', 'ESP32'],
     status: 'live',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/v1.0/ai故事.apk',
     highlights: [
       '实现RTC实时双向语音对话',
       '支持唤醒词「豆芽豆芽」语音控制',
@@ -36,6 +38,7 @@ export const projects: Project[] = [
     descriptionEn: 'A multilingual real-time voice communication app with end-to-end speech interaction capabilities.',
     tags: ['Android', 'Java', 'RTC', 'ASR', 'LLM'],
     status: 'archived',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/v1.0/ai口语.apk',
     highlights: [
       '多语言实时语音识别',
       'LLM语义理解集成',
@@ -50,6 +53,7 @@ export const projects: Project[] = [
     descriptionEn: 'A cross-platform smart chat and reminder app built with Flutter.',
     tags: ['Flutter', 'Dart', '跨平台', '语音交互'],
     status: 'archived',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/v1.0/记账和记事apk.apk',
     highlights: [
       'Flutter跨平台开发',
       '语音交互能力',
@@ -89,14 +93,15 @@ export const projects: Project[] = [
     id: 'aiteach',
     title: 'AITeach',
     titleEn: 'AITeach',
-    description: '一个在线教育平台，提供AI辅助的教学内容管理和学习追踪功能。',
+    description: '一个在线教育平台，提供AI辅助的教学内容管理和学习追踪功能，已稳定运营并服务数千名用户。',
     descriptionEn: 'An online education platform with AI-assisted teaching content management.',
-    tags: ['Vue 3', 'Python', 'MySQL', 'Vite'],
+    tags: ['Vue 3', 'Python', 'MySQL', 'Vite', '在线运营'],
     status: 'live',
+    link: 'https://yx.zqyey.com.cn/',
     highlights: [
       'Vue 3现代前端架构',
       'AI教学辅助功能',
-      '学习进度追踪'
+      '服务数千名用户'
     ]
   }
 ];

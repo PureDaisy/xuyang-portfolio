@@ -18,9 +18,18 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        {/* Avatar */}
+        <div className="mb-8">
+          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary p-1 shadow-2xl shadow-primary/20">
+            <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
+              <span className="text-5xl">🧑‍💻</span>
+            </div>
+          </div>
+        </div>
+
         {/* Greeting */}
         <p className="text-accent font-mono text-lg mb-4 animate-fade-in">
-          你好，我是
+          你好，欢迎来到我的世界
         </p>
 
         {/* Name */}
@@ -29,15 +38,18 @@ export default function Hero() {
         </h1>
 
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl font-semibold text-slate-300 mb-8">
-          AI Agent 开发工程师 · 全栈工程师 · 移动端开发
+        <h2 className="text-xl sm:text-2xl font-medium text-slate-300 mb-8">
+          <span className="text-slate-400">硕士在读</span>
+          <span className="mx-3 text-slate-600">·</span>
+          <span>AI 应用开发者</span>
+          <span className="mx-3 text-slate-600">·</span>
+          <span>全栈工程师</span>
         </h2>
 
         {/* Description */}
-        <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-          硕士在读，专注于大语言模型应用、实时语音交互系统开发。
-          <br />
-          热衷于构建智能化的产品，在 AI + 教育领域有丰富的项目经验。
+        <p className="text-base text-slate-400 max-w-xl mx-auto mb-10 leading-relaxed">
+          喜欢把有趣的想法变成可用的产品。<br />
+          目前折腾 AI + 教育方向，主要用语音对话和大模型。
         </p>
 
         {/* CTA Buttons */}
@@ -46,13 +58,13 @@ export default function Hero() {
             onClick={() => scrollToSection('projects')}
             className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1"
           >
-            查看项目
+            看看我的项目
           </button>
           <button
             onClick={() => scrollToSection('contact')}
             className="px-8 py-3 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:bg-slate-800 hover:border-slate-500 transition-all duration-300"
           >
-            联系我
+            聊聊
           </button>
         </div>
 

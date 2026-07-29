@@ -10,46 +10,65 @@ export default function About() {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image / Avatar Placeholder */}
-          <div className="relative">
-            <div className="w-64 h-64 mx-auto rounded-2xl bg-gradient-to-br from-primary to-secondary p-1">
-              <div className="w-full h-full rounded-2xl bg-slate-800 flex items-center justify-center">
-                <span className="text-6xl">🤖</span>
+        <div className="grid md:grid-cols-5 gap-12 items-start">
+          {/* Left: Avatar & Quick Info */}
+          <div className="md:col-span-2 text-center md:text-left">
+            <div className="relative inline-block">
+              <div className="w-48 h-48 mx-auto md:mx-0 rounded-2xl bg-gradient-to-br from-primary to-secondary p-1 shadow-xl shadow-primary/10">
+                <div className="w-full h-full rounded-2xl bg-slate-800 flex items-center justify-center">
+                  <span className="text-7xl">👨‍💻</span>
+                </div>
+              </div>
+              <div className="absolute -bottom-3 -right-3 px-4 py-2 bg-slate-800 rounded-xl text-sm text-slate-300 border border-slate-700 shadow-lg">
+                在读硕士
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl" />
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/20 rounded-full blur-xl" />
+
+            <div className="mt-8 space-y-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
+                <span className="text-xl">📍</span>
+                <span className="text-slate-400">中国</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center md:justify-start">
+                <span className="text-xl">🎓</span>
+                <span className="text-slate-400">计算机相关专业</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center md:justify-start">
+                <span className="text-xl">☕</span>
+                <span className="text-slate-400">喜欢写代码和咖啡</span>
+              </div>
+            </div>
           </div>
 
-          {/* Content */}
-          <div className="space-y-6">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                <span>🎓</span> 教育背景
+          {/* Right: Content */}
+          <div className="md:col-span-3 space-y-6">
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>📖</span> 我是谁
               </h3>
-              <p className="text-slate-400">
-                计算机专业硕士在读，研究方向聚焦于大语言模型应用与智能系统开发。
+              <p className="text-slate-400 leading-relaxed">
+                一个喜欢捣鼓技术的工程师。目前在读硕士，研究方向是 AI 应用。
+                比起纯理论研究，我更享受把想法变成实际可用的产品。
               </p>
             </div>
 
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                <span>💡</span> 技术专长
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>💻</span> 技术栈
               </h3>
-              <p className="text-slate-400">
-                熟悉 AI Agent 开发、RTC 实时语音交互、全栈 Web 开发、移动端开发。
-                对大模型应用落地有浓厚兴趣。
+              <p className="text-slate-400 leading-relaxed">
+                主力 Python / Java / TypeScript，写过后端、做过移动端、也折腾过前端。
+                对 AI 应用（尤其是语音对话方向）特别感兴趣，有实际项目经验。
               </p>
             </div>
 
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                <span>🚀</span> 项目经验
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>🎯</span> 在做什么
               </h3>
-              <p className="text-slate-400">
-                参与过多个 AI 教育产品的开发，在实习中积累了丰富的实际项目经验，
-                涉及 Web、移动端、嵌入式等多个技术领域。
+              <p className="text-slate-400 leading-relaxed">
+                主要在做 AI + 教育方向的探索，包括实时语音对话应用、大模型辅助教学等。
+                有过实习经验，参与过真实产品的开发。
               </p>
             </div>
           </div>
