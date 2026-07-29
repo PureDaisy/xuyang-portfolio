@@ -126,8 +126,8 @@ function ProjectIndex({
 
 export default function Projects() {
   const [selectedVideo, setSelectedVideo] = useState<SelectedVideo | null>(null);
-  const featuredProjects = projects.filter((project) => project.image);
-  const indexedProjects = projects.filter((project) => !project.image);
+  const activeProjects = projects.filter((project) => project.status !== 'archived');
+  const archivedProjects = projects.filter((project) => project.status === 'archived');
 
   useEffect(() => {
     if (!selectedVideo) return;
@@ -150,12 +150,13 @@ export default function Projects() {
       <div className="page-shell">
         <div className="section-heading">
           <h2>项目作品</h2>
-          <p>从在线教育到实时语音应用，这里记录我做过并持续打磨的产品。</p>
+          <p>优先展示仍在运营、可以下载或在线体验的产品。</p>
         </div>
 
-        <div className="featured-list">
-          {featuredProjects.map((project, index) => (
-            <FeaturedProject
+        <div className="project-index active-projects">
+          <h3 className="project-index-heading">正在运营</h3>
+          {activeProjects.map((project, index) => (
+            <ProjectIndex
               key={project.id}
               project={project}
               index={index}
@@ -164,16 +165,21 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="project-index">
-          <h3 className="project-index-heading">更多实践</h3>
-          {indexedProjects.map((project, index) => (
-            <ProjectIndex
+        <div className="archive-projects">
+          <div className="archive-heading">
+            <h3>过往项目</h3>
+            <p>已经停止维护，但保留为产品与工程实践记录。</p>
+          </div>
+          <div className="featured-list">
+          {archivedProjects.map((project, index) => (
+            <FeaturedProject
               key={project.id}
               project={project}
-              index={featuredProjects.length + index}
+              index={activeProjects.length + index}
               onOpenVideo={setSelectedVideo}
             />
           ))}
+          </div>
         </div>
       </div>
 
