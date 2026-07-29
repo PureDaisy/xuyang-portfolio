@@ -26,7 +26,7 @@ export const projects: Project[] = [
     descriptionEn: 'An AI oral English training app for children.',
     tags: ['Android', 'Java', '火山引擎RTC', 'ASR', 'TTS', 'ESP32'],
     status: 'live',
-    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/tag/apk',
     demoVideos: [
       { label: '硬件演示', src: 'video/ai故事硬件玩具.mp4' },
       { label: '软件演示', src: 'video/ai故事软件.mp4' },
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     descriptionEn: 'A cross-platform smart chat and reminder app.',
     tags: ['Flutter', 'Dart', '跨平台', '语音交互'],
     status: 'live',
-    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/tag/apk',
     highlights: [
       'Flutter跨平台开发',
       '语音交互能力',
