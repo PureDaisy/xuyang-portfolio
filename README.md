@@ -1,49 +1,61 @@
-# xuyang-portfolio
+# 徐洋 - 个人作品集
 
-个人作品集网站，展示 AI Agent 开发、全栈工程、移动端开发等技能与项目经验。
+![Portfolio](https://img.shields.io/badge/Portfolio-徐洋-blue)
+![Status](https://img.shields.io/badge/Status-求职中-green)
+![Location](https://img.shields.io/badge/Location-China-purple)
+
+## 关于我
+
+计算机专业硕士在读，专注于 **AI Agent 开发**、**实时语音交互系统**、**全栈 Web 开发**和**移动端开发**。
+
+在 AI + 教育领域有丰富的项目经验，熟悉大语言模型应用落地。
 
 ## 技术栈
 
-- React 18 + TypeScript
-- TailwindCSS
-- Vite
+### 编程语言
+- Python (AI/后端)
+- Java (Android)
+- JavaScript/TypeScript (前端)
+- Dart (Flutter)
 
-## 开发
+### 框架 & 平台
+- FastAPI / React / Vue 3
+- Android / Flutter
+- 火山引擎 RTC / ASR / TTS
 
-```bash
-# 安装依赖
-npm install
+### 工具 & 数据库
+- Docker / Git / Redis
+- PostgreSQL / MySQL
+- pgvector (向量数据库)
 
-# 启动开发服务器
-npm run dev
+### AI 能力
+- LLM 集成与应用
+- RTC 实时语音通信
+- ASR/TTS 语音处理
+- Agent 开发
 
-# 构建生产版本
-npm run build
+## 项目展示
 
-# 预览生产版本
-npm run preview
-```
+| 项目 | 类型 | 技术栈 | 状态 |
+|------|------|--------|------|
+| [卡通故事手表](https://github.com/PureDaisy/xuyang-portfolio#cartoon-story-watch) | Android App | Java + 火山引擎RTC + ESP32 | 运营中 |
+| [AITeach](https://github.com/PureDaisy/xuyang-portfolio#aiteach) | Web平台 | Vue 3 + Python | 运营中 |
+| [Realtime Communication](https://github.com/PureDaisy/xuyang-portfolio#realtime-communication) | Android App | Android + RTC | 已归档 |
+| [ChatBill](https://github.com/PureDaisy/xuyang-portfolio#chatbill) | Flutter App | Flutter + Dart | 已归档 |
+| [EchoFlow](https://github.com/PureDaisy/xuyang-portfolio#echoflow) | Web平台 | FastAPI + React + pgvector | 已归档 |
+| [AI Dating](https://github.com/PureDaisy/xuyang-portfolio#aidating) | Web平台 | FastAPI + React + MySQL | 已归档 |
 
-## 部署
+## 求职意向
 
-本项目配置为部署到 GitHub Pages。推送到 main 分支后会自动部署。
+- AI Agent 开发工程师
+- 全栈工程师
+- 移动端开发工程师
 
-或者手动构建后部署到任意静态托管服务。
+## 联系我
 
-## 项目结构
+- GitHub: [@PureDaisy](https://github.com/PureDaisy)
+- 邮箱: example@email.com
 
-```
-src/
-├── components/     # React 组件
-│   ├── Navbar.tsx
-│   ├── Hero.tsx
-│   ├── About.tsx
-│   ├── Projects.tsx
-│   ├── Skills.tsx
-│   └── Contact.tsx
-├── data/          # 数据文件
-│   └── projects.ts
-├── App.tsx
-├── main.tsx
-└── index.css
-```
+---
+
+© 2026 徐洋. Built with React + TailwindCSS.
