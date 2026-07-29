@@ -5,12 +5,12 @@ function SkillBar({ name, level, index, isVisible }: { name: string; level: numb
   return (
     <div className="space-y-2">
       <div className="flex justify-between text-sm">
-        <span className="text-slate-300">{name}</span>
-        <span className="text-slate-500 font-mono">{level}%</span>
+        <span className="text-gray-700 font-medium">{name}</span>
+        <span className="text-gray-400">{level}%</span>
       </div>
-      <div className="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
+          className="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full transition-all duration-1000 ease-out"
           style={{
             width: isVisible ? `${level}%` : '0%',
             transitionDelay: `${index * 100}ms`,
@@ -21,7 +21,7 @@ function SkillBar({ name, level, index, isVisible }: { name: string; level: numb
   );
 }
 
-function SkillCategory({ title, items, delay = 0 }: { title: string; items: { name: string; level: number }[]; delay: number }) {
+function SkillCategory({ title, items, delay = 0, emoji }: { title: string; items: { name: string; level: number }[]; delay: number; emoji: string }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -45,18 +45,16 @@ function SkillCategory({ title, items, delay = 0 }: { title: string; items: { na
   return (
     <div
       ref={ref}
-      className={`bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 transition-all duration-700 ${
+      className={`bg-white rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
-        <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-sm">
-          {title[0]}
-        </span>
+      <h3 className="text-lg font-semibold text-gray-800 mb-6 flex items-center gap-2">
+        <span className="text-2xl">{emoji}</span>
         {title}
       </h3>
-      <div className="space-y-4">
+      <div className="space-y-5">
         {items.map((item, index) => (
           <SkillBar
             key={item.name}
@@ -73,23 +71,23 @@ function SkillCategory({ title, items, delay = 0 }: { title: string; items: { na
 
 export default function Skills() {
   const categories = [
-    { title: '编程语言', data: skills.languages },
-    { title: '框架&平台', data: skills.frameworks },
-    { title: '工具&数据库', data: skills.tools },
-    { title: 'AI & 语音', data: skills.ai },
+    { title: '编程语言', emoji: '⌨️', data: skills.languages },
+    { title: '框架&平台', emoji: '🛠️', data: skills.frameworks },
+    { title: '工具&数据库', emoji: '⚙️', data: skills.tools },
+    { title: 'AI & 语音', emoji: '🤖', data: skills.ai },
   ];
 
   return (
-    <section id="skills" className="py-24 bg-slate-900/50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            技术技能 <span className="gradient-text">Skills</span>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-gray-800">
+            技术栈
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-4" />
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            熟悉多种编程语言、框架和工具，能够独立完成从后端到前端的全栈开发
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full mb-4" />
+          <p className="text-gray-500 max-w-xl mx-auto">
+            写代码这些年积累的一些技能
           </p>
         </div>
 
@@ -101,23 +99,9 @@ export default function Skills() {
               title={category.title}
               items={category.data}
               delay={index * 100}
+              emoji={category.emoji}
             />
           ))}
-        </div>
-
-        {/* Additional Skills Tags */}
-        <div className="mt-12 text-center">
-          <p className="text-slate-400 mb-6">其他技术栈</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {['GitHub', 'Docker', 'Vercel', '火山引擎', 'Nginx', 'Linux', 'REST API', 'WebSocket'].map((skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 bg-slate-800/50 rounded-full text-sm text-slate-300 border border-slate-700/50 hover:border-primary/50 hover:text-white transition-colors"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

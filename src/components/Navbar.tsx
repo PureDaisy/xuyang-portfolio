@@ -22,13 +22,15 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        isScrolled 
+          ? 'bg-white/90 backdrop-blur-lg shadow-sm' 
+          : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-xl font-bold gradient-text">
-            XU YANG
+          <a href="#" className="text-xl font-bold text-blue-500">
+            徐洋
           </a>
 
           {/* Desktop Navigation */}
@@ -37,17 +39,16 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-300 hover:text-white transition-colors relative group"
+                className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all group-hover:w-full" />
               </a>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-slate-300 hover:text-white"
+            className="md:hidden p-2 text-gray-600 hover:text-blue-500"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,12 +64,12 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-slate-800 rounded-lg mt-2 py-4 px-4">
+          <div className="md:hidden bg-white rounded-xl mt-2 py-4 px-4 shadow-lg">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-2 text-slate-300 hover:text-white transition-colors"
+                className="block py-2 text-gray-600 hover:text-blue-500 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

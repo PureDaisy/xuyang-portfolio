@@ -1,6 +1,6 @@
-# 徐洋 - 个人作品集
+# 许阳 - 个人作品集
 
-![Portfolio](https://img.shields.io/badge/Portfolio-徐洋-blue)
+![Portfolio](https://img.shields.io/badge/Portfolio-许阳-blue)
 ![Status](https://img.shields.io/badge/Status-求职中-green)
 ![Location](https://img.shields.io/badge/Location-China-purple)
 
@@ -58,4 +58,4 @@
 
 ---
 
-© 2026 徐洋. Built with React + TailwindCSS.
+© 2026 许阳. Built with React + TailwindCSS.
