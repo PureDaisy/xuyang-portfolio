@@ -52,7 +52,7 @@ export default function Contact() {
         {/* Footer */}
         <div className="mt-20 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} 徐洋 · Portfolio
+            © {new Date().getFullYear()} 许阳 · Portfolio
           </p>
         </div>
       </div>

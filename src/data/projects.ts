@@ -16,13 +16,13 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'cartoon-story-watch',
-    title: '卡通故事手表',
+    title: 'ai故事讲述（软硬件）',
     titleEn: 'Cartoon Story Watch',
     description: '面向少儿的AI口语陪练应用，支持实时语音对话、语音选课、故事跟读练习。',
     descriptionEn: 'An AI oral English training app for children.',
     tags: ['Android', 'Java', '火山引擎RTC', 'ASR', 'TTS', 'ESP32'],
     status: 'live',
-    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk/ai故事.apk',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk',
     highlights: [
       'RTC实时双向语音对话',
       '「豆芽豆芽」语音唤醒',
@@ -31,13 +31,13 @@ export const projects: Project[] = [
   },
   {
     id: 'realtime-communication',
-    title: '实时口语通信',
+    title: 'ai口语陪练',
     titleEn: 'Realtime Communication',
-    description: '多语言实时口语通信应用，语音识别、语义理解、TTS合成的全链路语音交互。',
+    description: '基于英语课程的实时口语通信应用，语音识别、语义理解、TTS合成的全链路语音交互。',
     descriptionEn: 'A multilingual real-time voice communication app.',
     tags: ['Android', 'Java', 'RTC', 'ASR', 'LLM'],
     status: 'archived',
-    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk/ai口语.apk',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/tag/apk',
     highlights: [
       '多语言实时语音识别',
       'LLM语义理解集成',
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     descriptionEn: 'A cross-platform smart chat and reminder app.',
     tags: ['Flutter', 'Dart', '跨平台', '语音交互'],
     status: 'archived',
-    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk/记账和记事apk.apk',
+    download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk',
     highlights: [
       'Flutter跨平台开发',
       '语音交互能力',

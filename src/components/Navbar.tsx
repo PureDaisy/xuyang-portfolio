@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-xl font-bold text-blue-500">
-            徐洋
+            许阳
           </a>
 
           {/* Desktop Navigation */}

@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="mb-10">
           <div className="w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1 shadow-xl shadow-blue-200">
             <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
-              <span className="text-6xl">🧑‍💻</span>
+              <img src="/证件照.png" alt="许阳" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function Hero() {
 
         {/* Name */}
         <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-gray-800">
-          徐洋
+          许阳
         </h1>
 
         {/* Title */}
