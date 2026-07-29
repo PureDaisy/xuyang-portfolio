@@ -36,7 +36,7 @@ export const projects: Project[] = [
     description: '基于英语课程的实时口语通信应用，语音识别、语义理解、TTS合成的全链路语音交互。',
     descriptionEn: 'A multilingual real-time voice communication app.',
     tags: ['Android', 'Java', 'RTC', 'ASR', 'LLM'],
-    status: 'archived',
+    status: 'live',
     download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/tag/apk',
     highlights: [
       '多语言实时语音识别',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     description: '跨平台智能对话与提醒应用，支持语音对话、智能提醒、聊天记录管理。',
     descriptionEn: 'A cross-platform smart chat and reminder app.',
     tags: ['Flutter', 'Dart', '跨平台', '语音交互'],
-    status: 'archived',
+    status: 'live',
     download: 'https://github.com/PureDaisy/xuyang-portfolio/releases/download/apk',
     highlights: [
       'Flutter跨平台开发',
