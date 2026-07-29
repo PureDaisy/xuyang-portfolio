@@ -75,6 +75,7 @@ export const projects: Project[] = [
     descriptionEn: 'An AI-powered social platform backend.',
     tags: ['Python', 'FastAPI', 'MySQL', 'Docker', 'React'],
     status: 'archived',
+    image: 'web png/ai dating.png',
     highlights: [
       'FastAPI高性能后端',
       'Docker容器化部署',
@@ -89,6 +90,7 @@ export const projects: Project[] = [
     descriptionEn: 'An intelligent social platform.',
     tags: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'Redis', 'pgvector'],
     status: 'archived',
+    image: 'web png/echoflow.png',
     highlights: [
       'AI Agent对话系统',
       'pgvector语义搜索',
