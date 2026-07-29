@@ -16,7 +16,7 @@ export default function About() {
             <div className="relative inline-block">
               <div className="w-44 h-44 mx-auto md:mx-0 rounded-2xl bg-gradient-to-br from-blue-400 to-purple-500 p-1 shadow-lg shadow-blue-100">
                 <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center overflow-hidden">
-                  <img src="/profile.png" alt="许阳" className="w-full h-full object-cover" />
+                  <img src={`${import.meta.env.BASE_URL}profile.png`} alt="许阳" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>

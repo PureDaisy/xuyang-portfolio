@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="mb-10">
           <div className="w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1 shadow-xl shadow-blue-200">
             <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
-              <img src="/profile.png" alt="许阳" className="w-full h-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}profile.png`} alt="许阳" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
